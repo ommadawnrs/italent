@@ -6,6 +6,7 @@ import { LotusRPC } from '@filecoin-shipyard/lotus-client-rpc';
 import { BrowserProvider } from '@filecoin-shipyard/lotus-client-provider-browser';
 import { mainnet } from '@filecoin-shipyard/lotus-client-schema';
 import getHtml from '../helpers/htmlEditor';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const Board = ({ activeMenu, tokenHtml }) => {
   const endpointUrl = 'ws://127.0.0.1:3453/rpc/v0';
@@ -18,6 +19,14 @@ const Board = ({ activeMenu, tokenHtml }) => {
   const html = getHtml(tokenHtml);
   const [code, setCode] = useState(html);
   const [response, setResponse] = useState("");
+  const [copied, setCopied] = useState(false);
+
+    const copy = () => {
+        setCopied(true);
+        setTimeout(() => {
+            setCopied(false);
+        }, 1500)
+    }
 
   const validateToken = async () => {
     if ( token !== "" ) {
@@ -75,7 +84,15 @@ const Board = ({ activeMenu, tokenHtml }) => {
                             <li>By default, the API listens on the local loopback interface 127.0.0.1, port 3453. This is configured in the config.toml file:</li>
                             <li>Config file:</li>
                         </ul>
-                        <div className="config_terminal"></div>
+                    <CopyToClipboard
+                        text="gedit ~/.lotus/config.toml"
+                        onCopy={copy}>
+                        <div>
+                            <div className="config_terminal"></div>
+                        </div>
+                    </CopyToClipboard>
+                    {copied ? <div className="copied_msg">Copied to clipboard &#10004;</div> : null}
+
                         <div className="config_code"></div>
                         <ul className="li_holder">
                             <li>By this, we set the local loopback to the localhost, port 3453. After listening configuration is done, restart of the affected processes is highly required! </li>
@@ -85,7 +102,14 @@ const Board = ({ activeMenu, tokenHtml }) => {
                             <li>Any client wishing to talk to the API endpoints, exposed by either the Lotus Node or the Lotus Miner, will need a token. Tokens can be obtained as follows.</li>
                             <li>For the Lotus Node:</li>
                         </ul>
-                        <div className="lotus_config"></div>
+                    <CopyToClipboard
+                        text="lotus auth create-token --perm-admin"
+                        onCopy={copy}>
+                        <div>
+                            <div className="lotus_config"></div>
+                        </div>
+                    </CopyToClipboard>
+                    {copied ? <div className="copied_msg">Copied to clipboard &#10004;</div> : null}
                         <div className="list_title">Note that the Lotus daemon has to be running in the background!</div>
                 </>
             }

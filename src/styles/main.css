@@ -369,6 +369,18 @@ html, body {
   padding: 10px 0px;
 }
 
+.config_terminal:hover::after {
+    content: "Copy";
+    position: relative;
+    left: 480px;
+    top: 5px;
+    color: #FFB065;
+    text-align: right;
+}
+.config_terminal:hover {
+    border: 1px solid #FFB065;
+    border-radius: 5px;
+}
 .config_terminal {
   width: 540px;
   height: 30px;
@@ -379,6 +391,13 @@ html, body {
   background-size: 540px 30px;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.copied_msg {
+    margin-bottom: 20px;
+    color: green;
+    font-size: 20px;
+    font-weight: 800;
 }
 
 .config_code {
@@ -393,6 +412,18 @@ html, body {
   background-position: center;
 }
 
+.lotus_config:hover::after {
+    content: "Copy";
+    position: relative;
+    left: 530px;
+    top: 15px;
+    color: #FFB065;
+    text-align: right;
+}
+.lotus_config:hover {
+    border: 1px solid #FFB065;
+    border-radius: 5px;
+}
 .lotus_config {
   width: 100%;
   max-width: 600px;
@@ -421,6 +452,18 @@ html, body {
   font-weight: 700;
 }
 
+.step3_config:hover::after {
+    content: "Copy";
+    position: relative;
+    left: 380px;
+    top: 8px;
+    color: #FFB065;
+    text-align: right;
+}
+.step3_config:hover {
+    border: 1px solid #FFB065;
+    border-radius: 5px;
+}
 .step3_config {
   width: 100%;
   max-width: 530px;

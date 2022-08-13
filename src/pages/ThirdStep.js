@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import TitleAndDescription from "../components/TitleAndDescription";
 import Board from "../components/Board";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 const ThirdStep = () => {
-  
+  const [copied, setCopied] = useState(false);
+
+  const copy = () => {
+      setCopied(true);
+      setTimeout(() => {
+          setCopied(false);
+      }, 1500)
+  }
+
   return (
     <>
-      <TitleAndDescription 
+      <TitleAndDescription
         title={"Step 3"}
         description={"API User permission"}
         hasCbx={true}
@@ -26,7 +35,14 @@ const ThirdStep = () => {
             </ul>
             <div className="list_title">This request is no different but the Lotus application (as client) is using a default pre-generated API token that is available locally and located in</div>
             <div className="list_title bold">~/.lotus/token</div>
-            <div  className="step3_config"></div>
+            <CopyToClipboard
+                text='echo "$(cat ~/.lotus/token)"'
+                onCopy={copy}>
+                <div>
+                    <div  className="step3_config"></div>
+                </div>
+            </CopyToClipboard>
+            {copied ? <div className="copied_msg">Copied to clipboard &#10004;</div> : null}
         </div>
         <div className="board_holder">
           <Board activeMenu={""} />
