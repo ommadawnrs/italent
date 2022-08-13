@@ -2,9 +2,9 @@ import React, { useState, memo } from "react";
 import { useLocation, useNavigate } from 'react-router-dom';
 import MonacoEditor from 'react-monaco-editor';
 import classnames from 'classnames';
-import { LotusRPC } from 'https://unpkg.com/@filecoin-shipyard/lotus-client-rpc?module';
-import { BrowserProvider } from 'https://unpkg.com/@filecoin-shipyard/lotus-client-provider-browser?module';
-import { mainnet } from 'https://unpkg.com/@filecoin-shipyard/lotus-client-schema?module';
+import { LotusRPC } from '@filecoin-shipyard/lotus-client-rpc';
+import { BrowserProvider } from '@filecoin-shipyard/lotus-client-provider-browser';
+import { mainnet } from '@filecoin-shipyard/lotus-client-schema';
 import getHtml from '../helpers/htmlEditor';
 
 const Board = ({ activeMenu, tokenHtml }) => {
