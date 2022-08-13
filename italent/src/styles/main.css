@@ -1,0 +1,751 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+
+  background-image: url("../../public/images/main_back.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #233441; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #90B7EF;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #90B7EF;
+}
+
+@font-face {
+  font-family: GilroySemiBold;
+  src: url("../../public/fonts/Gilroy-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: GilroyBold;
+  src: url("../../public/fonts/Gilroy-Bold.ttf");
+}
+
+.main_container {
+  display: inline-block;
+
+  width: 100%;
+
+  padding: 55px 100px 40px 100px;
+
+  text-align: left;
+}
+
+.main_title {
+  position: relative;
+  width: 100%;
+
+  margin-bottom: 35px;
+
+  text-align: left;
+  font-style: normal;
+  font-size: 64px;
+  line-height: 56px;
+  color: #90B7EF;
+  font-family: GilroySemiBold;
+}
+
+.main_description {
+  width: 100%;
+
+  margin-bottom: 90px;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 38px;
+  font-family: 'Mulish', sans-serif;
+
+  color: #FAFBFD;
+}
+
+.inner_page_holder {
+  display: inline-block;
+  
+  width: 100%;
+}
+
+
+.left_board_holder {
+  display: inline-block;
+
+  width: 450px;
+
+  padding-top: 155px;
+
+  text-align: left;
+
+  vertical-align: top;
+}
+
+.board_holder {
+  position: relative;
+  display: inline-block;
+
+  width: calc(100% - 450px);
+
+  vertical-align: top;
+}
+
+.info_menu {
+  display: inline-block;
+
+  width: 330px;
+
+  margin-bottom: 15px;
+
+  background-color: #1E2131;
+
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 56px;
+  text-align: center;
+  color: #F4F5FC;
+
+  border-radius: 13px;
+
+  cursor: pointer;
+}
+
+.info_menu.active {
+  border: 2px solid #FFB065;
+}
+
+.board {
+  display: inline-block;
+
+  width: 100%;
+  height: 600px;
+
+  padding: 70px 120px 140px 65px;
+
+  background-image: url("../../public/images/board_table.png");
+  background-size: 100% 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.inner_board {
+  display: inline-block;
+
+  width: 100%;
+  max-height: 440px;
+
+  text-align: left;
+
+  overflow-y: auto;
+}
+
+.li_holder {
+  display: inline-block;
+
+  width: 100%;
+
+  padding-left: 25px;
+}
+
+.li_holder li {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+.list_title {
+  width: 100%;
+
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+.li_holder li::marker {
+  color: #90B7EF;
+}
+
+.btn_holder_intro {
+  display: inline-block;
+
+  width: 100%;
+
+  margin-top: 10px;
+  padding-right: 120px;
+
+  text-align: center;
+}
+
+.main_btn {
+  display: inline-block;
+
+  background: #FFB065;
+
+  width: 165px;
+
+  padding: 21px 0px;
+
+  font-family: GilroyBold;
+  font-size: 24px;
+  text-align: center;
+  color: #F4F5FC;
+
+  border-radius: 63.4103px;
+
+  cursor: pointer;
+}
+
+.main_a {
+  display: block;
+
+  width: 100%;
+
+  font-family: 'Mulish';
+  color: #90B7EF;
+}
+
+.holder_check {
+  display: inline-block;
+
+  width: 100%;
+
+  margin-bottom: 30px;
+
+  text-align: left;
+}
+
+.checkbox {
+  display: inline-block;
+
+  width: 32px;
+  height: 32px;
+
+  margin-right: 20px;
+
+  border: 2px solid #5A98F2;
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  vertical-align: middle;
+}
+
+.checkbox.active {
+  background-color: #5A98F2;
+  background-image: url("../../public/images/checked.svg");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.smaller_margin_decription {
+  margin-bottom: 50px;
+}
+
+.checkbox_title {
+  display: inline-block;
+
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+  color: #FDFCFF;
+
+  vertical-align: middle;
+}
+
+.first_step_holder {
+  padding-top: 15px;
+}
+
+.step1_guy {
+  position: relative;
+  display: inline-block;
+
+  width: 100%;
+  height: 598px;
+  
+  background-image: url("../../public/images/step1guy.png");
+  background-size: 325px 598px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  vertical-align: top;
+}
+
+.first_step_btn {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.step2guy {
+  position: relative;
+  left: -75px;
+  display: inline-block;
+
+  width: 100%;
+  height: 598px;
+  
+  background-image: url("../../public/images/step2guy.png");
+  background-size: 355px 598px;
+  background-repeat: no-repeat;
+  background-position: center left;
+
+  vertical-align: top;
+}
+
+.second_step_btn {
+  position: absolute;
+  top: 8px;
+  left: auto;
+  right: 20px;
+}
+
+.logo_holder {
+  display: inline-block;
+
+  width: 100%;
+
+  text-align: right;
+}
+
+.logo {
+  display: inline-block;
+
+  width: 43px;
+  height: 43px;
+
+  background-image: url("../../public/images/logo.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border-radius: 50%;
+}
+
+.board_title {
+  padding-bottom: 10px;
+
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+
+  color: #FFFFFF;
+}
+
+.padd_title {
+  padding: 10px 0px;
+}
+
+.config_terminal {
+  width: 540px;
+  height: 30px;
+
+  margin-bottom: 15px;
+  
+  background-image: url("../../public/images/config_terminal.png");
+  background-size: 540px 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.config_code {
+  width: 540px;
+  height: 250px;
+
+  margin-bottom: 15px;
+  
+  background-image: url("../../public/images/code_config.png");
+  background-size: 540px 250px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.lotus_config {
+  width: 100%;
+  max-width: 600px;
+  min-width: 540px;
+  height: 50px;
+
+  margin-bottom: 15px;
+  
+  background-image: url("../../public/images/lotus_config.png");
+  background-size: 100% 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.white_a {
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.thirdstep_left_holder {
+  padding-top: 0px;
+  padding-right: 20px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.step3_config {
+  width: 100%;
+  max-width: 530px;
+  height: 36px;
+
+  margin-top: 5px;
+
+  background-image: url("../../public/images/step3_config.png");
+  background-size: 100% 36px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form_title {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+.token_padd {
+  padding-bottom: 80px;
+}
+
+.input_holder {
+  display: inline-block;
+
+  width: 100%;
+
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #90B7EF;
+}
+
+.main_input {
+  display: inline-block;
+
+  width: calc(100% - 165px);
+
+  padding-right: 20px;
+
+  background-color: transparent;
+
+  font-size: 20px;
+  color: #fff;
+  font-family: 'Mulish';
+
+  border: none;
+  outline: none;
+
+  vertical-align: middle;
+}
+
+.result_info {
+  width: 100%;
+
+  padding-top: 10px;
+  padding-right: 175px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFFFFF;
+}
+
+.success_guy {
+  position: absolute;
+  bottom: 64px;
+  right: 45px;
+
+  width: 250px;
+  height: 237px;
+
+  background-image: url("../../public/images/success_guy.png");
+  background-size: 250px 237px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.failed_guy {
+  position: absolute;
+  bottom: 64px;
+  right: 45px;
+
+  width: 269px;
+  height: 230px;
+
+  background-image: url("../../public/images/failed_guy.png");
+  background-size: 269px 230px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.info_content {
+  width: 100%;
+  height: 162px;
+
+  margin-bottom: 10px;
+  padding: 15px 25px;
+
+  background: rgba(32, 36, 56, 0.7);
+
+  border-radius: 10px;
+
+  overflow-y: auto;
+}
+
+.info_title {
+  width: 100%;
+
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+
+.inner_board pre {
+  color: #fff;
+}
+
+.editor_holder {
+  padding: 40px 70px 90px 65px;
+}
+
+.disabled_btn {
+  background: #939393;
+  opacity: 0.5;
+  cursor: auto;
+}
+
+.info_part {
+  padding-top: 10px;
+
+  word-break: break-all;
+  font-size: 16px;
+  color: #fff;
+  text-align: left;
+  font-family: 'Mulish';
+}
+
+.pt10 {
+  padding-top: 10px;
+}
+
+@media (max-width: 1100px) {
+  .left_board_holder {
+    width: 100%;
+
+    padding-top: 0px;
+  }
+
+  .info_menu {
+    width: 100%;
+  }
+
+  .btn_holder_intro {
+    padding-right: 0px;
+  }
+
+  .board_holder {
+    width: 100%;
+    
+    margin-top: 20px;
+  }
+
+  .board {
+    padding: 70px 50px 100px 40px;
+  }
+
+  .thirdstep_left_holder {
+    padding-right: 0px;
+  }
+}
+
+@media (max-width: 900px) {
+  .main_container {
+    padding: 55px 40px 40px 40px;
+  }
+
+  .step2guy {
+    left: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main_description {
+    margin-bottom: 30px;
+
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .main_title {
+    margin-bottom: 15px;
+  }
+
+  .checkbox_title {
+    width: calc(100% - 40px);
+
+    font-size: 18px;
+
+    vertical-align: top;
+  }
+
+  .checkbox {
+    width: 25px;
+    height: 25px;
+
+    margin-right: 10px;
+    margin-top: 4px;
+  }
+
+  .checkbox.active {
+    background-size: 12px;
+  }
+
+  .step1_guy {
+    height: 200px;
+
+    background-size: 175px 195px;
+  }
+
+  .step2guy {
+    height: 200px;
+
+    background-size: 190px 200px;
+  }
+
+  .success_guy {
+    bottom: 61px;
+    right: 25px;
+
+    width: 150px;
+    height: 150px;
+
+    background-size: contain;
+  }
+
+  .failed_guy {
+    bottom: 54px;
+    right: 25px;
+
+    width: 150px;
+    height: 150px;
+
+    background-size: contain;
+  }
+
+  .result_info {
+    padding-right: 150px;
+
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  .li_holder li {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .main_container {
+    padding: 15px 15px 40px 15px;
+  }
+
+  .main_title {
+    font-size: 45px;
+  }
+
+  .info_menu, .main_description {
+    font-size: 18px;
+  }
+
+  .board {
+    height: 400px;
+
+    padding: 35px 25px 100px 25px;
+
+    background-size: 100% 400px;
+  }
+
+  .inner_board {
+    max-height: 300px;
+  }
+
+  .main_btn {
+    padding: 10px 0px;
+  }
+
+  .step1_guy {
+    background-position: center right;
+  }
+
+  .list_title, .board_title, .info_title {
+    font-size: 18px;
+  }
+
+  .success_guy {
+    bottom: 40px;
+  }
+
+  .failed_guy {
+    bottom: 33px;
+  }
+
+  .validate_btn {
+    width: 100px;
+
+    font-size: 16px;
+  }
+
+  .main_input {
+    width: calc(100% - 100px);
+
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .second_step_btn {
+    top: 50px;
+  }
+}
