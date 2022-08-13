@@ -9,9 +9,9 @@ const getHtml = (token) => {
         <div id="chainHeight">Loading...</div>
         <div id="auth">Auth...</div>
         <script type="module">
-          import { LotusRPC } from 'https://unpkg.com/@filecoin-shipyard/lotus-client-rpc?module'
-          import { BrowserProvider } from 'https://unpkg.com/@filecoin-shipyard/lotus-client-provider-browser?module'
-          import { mainnet } from 'https://unpkg.com/@filecoin-shipyard/lotus-client-schema?module'
+          import { LotusRPC } from '@filecoin-shipyard/lotus-client-rpc';
+          import { BrowserProvider } from '@filecoin-shipyard/lotus-client-provider-browser';
+          import { mainnet } from '@filecoin-shipyard/lotus-client-schema';
           // lotus localhost port
           const endpointUrl = 'ws://127.0.0.1:3453/rpc/v0'  // localhost lotus daemon
     
