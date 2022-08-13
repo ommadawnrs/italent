@@ -20,7 +20,7 @@ const Board = ({ activeMenu, tokenHtml }) => {
   const [response, setResponse] = useState("");
 
   const validateToken = async () => {
-    if ( token !== "" ) { 
+    if ( token !== "" ) {
         try {
             const auth = await client.authVerify(token);
             setResponse("success");
@@ -40,7 +40,7 @@ const Board = ({ activeMenu, tokenHtml }) => {
                     <li>A blockchain collects information together in groups, known as blocks, that hold sets of information. Blocks have certain storage capacities and, when filled, are closed and linked to the previously filled block, forming a chain of data known as the blockchain.</li>
                     <li>All new information that follows that freshly added block is compiled into a newly formed block that will then also be added to the chain once filled</li>
                 </ul>
-                
+
             }
             { pathname === "/" && activeMenu === "What is aBlock Explorer?" &&
                 <ul className="li_holder">
@@ -52,14 +52,14 @@ const Board = ({ activeMenu, tokenHtml }) => {
                 <ul className="li_holder">
                     <li>Filecoin is a peer-to-peer network that stores files, with built-in economic incentives to ensure files are stored reliably over time.</li>
                     <li>In Filecoin, users pay to store their files on storage providers. Storage providers are computers responsible for storing files and proving they have stored the files correctly over time.</li>
-                    <li>Anyone who wants to store their files or get paid for storing other users’ files can join Filecoin. Available storage, and the price of that storage, is not controlled by any single company. Instead, Filecoin facilitates open markets for storing and retrieving files that anyone can participate in. More about Filecoin <a className="white_a" href="https://lotus.filecoin.io/lotus/install/linux/#system-specific" target="_blank" rel="noreferrer">here</a>.</li>
+                    <li>Anyone who wants to store their files or get paid for storing other users’ files can join Filecoin. Available storage, and the price of that storage, is not controlled by any single company. Instead, Filecoin facilitates open markets for storing and retrieving files that anyone can participate in. More about Filecoin <a className="white_a" href="src/components/Board#system-specific" target="_blank" rel="noreferrer">here</a>.</li>
                 </ul>
             }
             { pathname === "/firststep" &&
                 <>
                     <div className="list_title">Operativni sistem: Linux</div>
                     <ul className="li_holder">
-                        <li>Install from source: <a className="main_a" href="https://lotus.filecoin.io/lotus/install/linux/#system-specific" target="_blank" rel="noreferrer">https://lotus.filecoin.io/lotus/install/linux/#system-specific</a></li>
+                        <li>Install from source: <a className="main_a" href="src/components/Board#system-specific" target="_blank" rel="noreferrer">https://lotus.filecoin.io/lotus/install/linux/#system-specific</a></li>
                         <li>If all steps from the link above are successfully done, the version check: lotus –version should return the version</li>
                     </ul>
                 </>
@@ -97,7 +97,7 @@ const Board = ({ activeMenu, tokenHtml }) => {
                         { (response === "" || response === "failed") &&
                             <div className="main_btn validate_btn" onClick={() => validateToken()}>Validate</div>
                         }
-                        { response === "success" && 
+                        { response === "success" &&
                             <div className="main_btn validate_btn" onClick={() => navigate("/fourthstep/"+token)}>Next Step</div>
                         }
                     </div>
@@ -105,13 +105,13 @@ const Board = ({ activeMenu, tokenHtml }) => {
                     { response === "success" &&
                         <>
                             <div className="result_info">Great! Lotus is successfully installed! Now let's start it and sync the chain.</div>
-                            <div className="success_guy"></div> 
+                            <div className="success_guy"></div>
                         </>
                     }
                     { response === "failed" &&
                         <>
                             <div className="result_info">Error! Try again.</div>
-                            <div className="failed_guy"></div> 
+                            <div className="failed_guy"></div>
                         </>
                     }
                 </>
