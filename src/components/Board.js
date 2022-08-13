@@ -7,6 +7,7 @@ import { BrowserProvider } from '@filecoin-shipyard/lotus-client-provider-browse
 import { mainnet } from '@filecoin-shipyard/lotus-client-schema';
 import getHtml from '../helpers/htmlEditor';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import ReactSrcDocIframe from "react-srcdoc-iframe";
 
 const Board = ({ activeMenu, tokenHtml }) => {
   const endpointUrl = 'ws://127.0.0.1:3453/rpc/v0';
@@ -140,24 +141,27 @@ const Board = ({ activeMenu, tokenHtml }) => {
                     }
                 </>
             }
-            { pathname.includes("/fourthstep") &&
+            {pathname.includes("/fourthstep") && (
                 <>
-                   <MonacoEditor
+                    <ReactSrcDocIframe style={{ display: "none" }} srcDoc={code} width="500" height="500" /> <br />
+                    <br />
+                    <br />
+                    <MonacoEditor
                         width="100%"
                         height="475"
                         language="html"
                         options={{
                             selectOnLineNumbers: true,
                             roundedSelection: false,
-                            cursorStyle: 'line',
+                            cursorStyle: "line",
                             automaticLayout: false,
-                            theme: 'vs-dark',
-                          }}
+                            theme: "vs-dark",
+                        }}
                         value={code}
                         onChange={setCode}
                     />
                 </>
-            }
+            )}
         </div>
     </div>
   );
