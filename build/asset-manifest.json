@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.c00ef339.css",
-    "main.js": "/static/js/main.12fec8ea.js",
-    "static/js/787.148f5de1.chunk.js": "/static/js/787.148f5de1.chunk.js",
+    "main.css": "/static/css/main.71703d01.css",
+    "main.js": "/static/js/main.ee5f2991.js",
+    "static/js/787.736599d8.chunk.js": "/static/js/787.736599d8.chunk.js",
     "static/media/main_back.png": "/static/media/main_back.82c79e808091a4138780.png",
     "static/media/board_table.png": "/static/media/board_table.bd49e2e216368da0dd43.png",
     "static/media/Gilroy-SemiBold.ttf": "/static/media/Gilroy-SemiBold.07b9100a72fe7d46d20a.ttf",
@@ -16,15 +16,15 @@
     "static/media/lotus_config.png": "/static/media/lotus_config.99d2ccd2952ad1944b87.png",
     "static/media/step3_config.png": "/static/media/step3_config.8f06cd4ee6a56c010c47.png",
     "static/media/config_terminal.png": "/static/media/config_terminal.258fb255a1da48f0bb5d.png",
-    "static/media/logo.svg": "/static/media/logo.9628773a146622f1ca3b.svg",
+    "static/media/logo.svg": "/static/media/logo.c716d8142d4576bb7a9a.svg",
     "index.html": "/index.html",
     "static/media/checked.svg": "/static/media/checked.fae388407f0c24cd13bc.svg",
-    "main.c00ef339.css.map": "/static/css/main.c00ef339.css.map",
-    "main.12fec8ea.js.map": "/static/js/main.12fec8ea.js.map",
-    "787.148f5de1.chunk.js.map": "/static/js/787.148f5de1.chunk.js.map"
+    "main.71703d01.css.map": "/static/css/main.71703d01.css.map",
+    "main.ee5f2991.js.map": "/static/js/main.ee5f2991.js.map",
+    "787.736599d8.chunk.js.map": "/static/js/787.736599d8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c00ef339.css",
-    "static/js/main.12fec8ea.js"
+    "static/css/main.71703d01.css",
+    "static/js/main.ee5f2991.js"
   ]
 }
